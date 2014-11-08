@@ -6255,7 +6255,9 @@ the options --allow, --warn, or --forbid ; for example:
 
         for fn in args:
             try:
-                if not self._lintcheck( fn, output_filename=output_filename,
+                if self.SUCCESS_FAIL == self._lintcheck(
+                                        fn,
+                                        output_filename=output_filename,
                                         verbose=verbose,
                                         reformat=reformat,
                                         show_stats=show_stats,
